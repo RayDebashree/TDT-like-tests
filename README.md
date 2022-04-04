@@ -1,5 +1,5 @@
 ### Description
-`TDT-like-tests` is intended to be a suite of R functions for implementing modified transmission disequilibrium tests (TDT) to hybrid designs (e.g., case-parent/control-parent trios) on a genome-wide scale. 
+'TDT-like-tests' is intended to be a suite of R functions for implementing modified transmission disequilibrium tests (TDT) on hybrid designs (e.g., case-parent/control-parent trios). 
 
 Currently, it has one function `TDT.DCtrios` that implements two TDT-like-tests for case-parent/control-parent trio design. It is based on the statistical methods proposed in Deng & Chen (2001), and as used in Ray et al. (2022). Please refer/cite *both* articles if this function is used:
 
@@ -44,7 +44,9 @@ TDT.DCtrios(Tcase, NTcase, Tcontrol, NTcontrol)
 | `Tcontrol` | Same as input above. |
 | `NTcontrol` | Same as input above. |
 | `Z.TDT.DC` | 1-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>DC</sub>, a contingency table test for association of allele transmissions with disease status from case- and control-parent trios jointly. |
-| `pvalue.TDT.DC` | Pvalue of the 1-df TDT<sub>DC</sub> test. |
-| `Z.TDT.DplusC` | 2-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>D+C</sub>, a contingency table test for association of allele transmissions with disease status based on summing the independent test statistics from case-parent trios and from control-parent trios separately. |
-| `pvalue.TDT.DplusC` | Pvalue of the 2-df TDT<sub>D+C</sub> test. |
+| `pvalue.TDT.DC` | P-value of the 1-df TDT<sub>DC</sub> test. |
+| `Z.TDT.DplusC` | 2-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>D+C</sub>, a contingency table test for association of allele transmissions with disease status based on combining the independent TDT statistics from case-parent trios and from control-parent trios separately. |
+| `pvalue.TDT.DplusC` | P-value of the 2-df TDT<sub>D+C</sub> test. |
 
+#### Notes
+1. To obtain `T` and `NT` values per variant for a specific family type (either case-parent trios or control-parent trios), one may implement `--TDT` option from the GDT software by Chen et al., 2009 (https://www.chen.kingrelatedness.com/software/GDT/).
