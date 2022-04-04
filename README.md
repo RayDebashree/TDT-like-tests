@@ -1,5 +1,5 @@
 ### Description
-TDT-like-tests is intended to be a suite of R functions for implementing modified transmission disequilibrium tests (TDT) to hybrid designs (e.g., case-parent/control-parent trios) on a genome-wide scale. 
+`TDT-like-tests` is intended to be a suite of R functions for implementing modified transmission disequilibrium tests (TDT) to hybrid designs (e.g., case-parent/control-parent trios) on a genome-wide scale. 
 
 Currently, it has one function `TDT.DCtrios` that implements two TDT-like-tests for case-parent/control-parent trio design. It is based on the statistical methods proposed in Deng & Chen (2001), and as used in Ray et al. (2022). Please refer/cite *both* articles if this function is used:
 
@@ -31,20 +31,20 @@ TDT.DCtrios(Tcase, NTcase, Tcontrol, NTcontrol)
 #### Arguments
 | Input | Description |
 | ---: | --- |
-| `Tcase` | The vector of estimated SNP effects of size `k` from a 2 degree of freedom (df) gene-environment model, where `k`(>1) is the number of studies from which the SNP effects are obtained. In other words, a model with main effect G and interaction effect GxE are fit for each of the `k` independent studies to be meta-analyzed, and `SNP.coef` contains all the coefficient estimates for G. |
-| `NTcase` | The vector of estimated GxE effects, from the afore-mentioned model, of size `k` . |
-| `Tcontrol` | The vector of estimated standard errors of SNP effects, from the afore-mentioned model, of size `k`. |
-| `NTcontrol` | The vector of estimated standard errors of GxE effects, from the afore-mentioned model, of size `k`. |
+| `Tcase` | The number of times the marker allele is *transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only. |
+| `NTcase` | The number of times the marker allele is *not transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only. |
+| `Tcontrol` | The number of times the marker allele is *transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only, which can be viewed as a test for 'healthy' rather than 'disease' allele, though at the same disease susceptibility locus. |
+| `NTcontrol` | The number of times the marker allele is *not transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only. |
 
 #### Value
 | Output | Description |
 | ---: | --- |
-| `Tcase` | Jointly meta-analyzed SNP effect for a 2-df model with main effect G and gene-environment interaction effect GxE. |
-| `NTcase` | Jointly meta-analyzed GxE effect for the afore-mentioned 2-df model. |
-| `Tcontrol` | Jointly meta-analyzed standard error of SNP effect estimate for the afore-mentioned 2-df model. |
-| `NTcontrol` | Jointly meta-analyzed standard error of GxE effect estimate for the afore-mentioned 2-df model. |
-| `Z.TDT.DC` | Jointly meta-analyzed covariance between SNP and GxE effect estimates for the afore-mentioned 2-df model. |
-| `pvalue.TDT.DC` | 2-df Wald test statistic for the joint test of SNP and GxE effects. |
-| `Z.TDT.DplusC` | P-value of the 2-df Wald test. P-value below chosen threshold (usually the traditional genome-wide threshold of 5e-7) means either or both the SNP and the GxE effects are statistically significantly different from 0. |
-| `pvalue.TDT.DplusC` | P-value of the 2-df Wald test. P-value below chosen threshold (usually the traditional genome-wide threshold of 5e-7) means either or both the SNP and the GxE effects are statistically significantly different from 0. |
+| `Tcase` | Same as input above. |
+| `NTcase` | Same as input above. |
+| `Tcontrol` | Same as input above. |
+| `NTcontrol` | Same as input above. |
+| `Z.TDT.DC` | 1-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>DC</sub>, a contingency table test for association of allele transmissions with disease status from case- and control-parent trios jointly. |
+| `pvalue.TDT.DC` | Pvalue of the 1-df TDT<sub>DC</sub> test. |
+| `Z.TDT.DplusC` | 2-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>D+C</sub>, a contingency table test for association of allele transmissions with disease status based on summing the independent test statistics from case-parent trios and from control-parent trios separately. |
+| `pvalue.TDT.DplusC` | Pvalue of the 2-df TDT<sub>D+C</sub> test. |
 
