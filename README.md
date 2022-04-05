@@ -31,10 +31,10 @@ TDT.DCtrios(Tcase, NTcase, Tcontrol, NTcontrol)
 #### Arguments
 | Input | Description |
 | ---: | --- |
-| `Tcase` | The number of times the marker allele is *transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only. |
-| `NTcase` | The number of times the marker allele is *not transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only. |
-| `Tcontrol` | The number of times the marker allele is *transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only, which can be viewed as a test for 'healthy' rather than 'disease' allele, though at the same disease susceptibility locus. |
-| `NTcontrol` | The number of times the marker allele is *not transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only. |
+| `Tcase` | The number of times the marker allele is *transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only with at least one heterozygous parent. |
+| `NTcase` | The number of times the marker allele is *not transmitted* from a parent to an affected child. This relates to the TDT applied to *case-parent trios* only with at least one heterozygous parent. |
+| `Tcontrol` | The number of times the marker allele is *transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only with at least one heterozygous parent. This TDT can be viewed as a test for 'healthy' rather than 'disease' allele, though at the same disease susceptibility locus. |
+| `NTcontrol` | The number of times the marker allele is *not transmitted* from a parent to an unaffected child. This relates to the TDT applied to *control-parent trios* only with at least one heterozygous parent. |
 
 #### Value
 | Output | Description |
@@ -43,9 +43,9 @@ TDT.DCtrios(Tcase, NTcase, Tcontrol, NTcontrol)
 | `NTcase` | Same as input above. |
 | `Tcontrol` | Same as input above. |
 | `NTcontrol` | Same as input above. |
-| `Z.TDT.DC` | 1-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>DC</sub>, a contingency table test for association of allele transmissions with disease status from case- and control-parent trios jointly. |
+| `Z.TDT.DC` | 1-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>DC</sub>, a contingency table test for association of disease status with allele transmissions from case- and control-parent trios considered jointly. |
 | `pvalue.TDT.DC` | P-value of the 1-df TDT<sub>DC</sub> test. |
-| `Z.TDT.DplusC` | 2-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>D+C</sub>, a contingency table test for association of allele transmissions with disease status based on combining the independent TDT statistics from case-parent trios and from control-parent trios separately. |
+| `Z.TDT.DplusC` | 2-df &chi;<sup>2</sup>-distributed test statistic for TDT<sub>D+C</sub>, a contingency table test for association of disease status with allele transmissions based on combining the independent TDT statistics from case-parent trios and from control-parent trios separately. |
 | `pvalue.TDT.DplusC` | P-value of the 2-df TDT<sub>D+C</sub> test. |
 
 #### Notes
