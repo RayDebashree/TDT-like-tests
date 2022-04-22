@@ -5,7 +5,7 @@ Currently, it has one function `TDT.DCtrios` that implements two TDT-like-tests 
 
 1. Deng, H.W. and Chen, W.M. (2001). "The power of the transmission disequilibrium test (TDT) with both case-parent and control-parent trios". *Genetics Research*, 78:289-302. https://doi.org/10.1017/s001667230100533x
 
-2. Ray, D., Vergara, C., Taub, M.A., Wojcik, G., Ladd-Acosta, C., Beaty, T.H., and Duggal, P. (2022) "Benchmarking statistical methods for analyzing parent-child dyads in genetic association studies". *Genetic Epidemiology* (to appear).
+2. Ray, D., Vergara, C., Taub, M.A., Wojcik, G., Ladd-Acosta, C., Beaty, T.H., and Duggal, P. (2022) "Benchmarking statistical methods for analyzing parent-child dyads in genetic association studies". *Genetic Epidemiology*. https://doi.org/10.1002/gepi.22453
 
 **Key Words:** Case-parent/control-parent design; Family-based GWAS; Hybrid design; Offspring design; Transmission disequilibrium; Trios
 
